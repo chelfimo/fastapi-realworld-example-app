@@ -1,0 +1,132 @@
+[
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"user\": {\"email\": \"searchtest_1742121600@example.com\", \"password\": \"Password123!\", \"username\": \"searchtest_1742121600\"}}",
+    "ResponseBody": "{\"user\": {\"email\": \"searchtest_1742121600@example.com\", \"username\": \"searchtest_1742121600\", \"token\": \"string\", \"bio\": \"\", \"image\": null}}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/api/users",
+    "QueryParams": {},
+    "StatusCode": 201,
+    "Port": 8000,
+    "Timestamp": "2026-03-16T21:40:30.083Z",
+    "Scheme": "http"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"user\": {\"email\": \"searchtest_1742121600@example.com\", \"password\": \"Password123!\"}}",
+    "ResponseBody": "{\"user\": {\"email\": \"searchtest_1742121600@example.com\", \"username\": \"searchtest_1742121600\", \"token\": \"string\", \"bio\": \"\", \"image\": null}}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/api/users/login",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 8000,
+    "Timestamp": "2026-03-16T21:40:34.834Z",
+    "Scheme": "http"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"article\": {\"title\": \"Searchable Article Skyrampkw1742121600\", \"description\": \"Testing keyword search functionality\", \"body\": \"This article body contains unique keyword skyrampkw1742121600 for search validation.\", \"tagList\": []}}",
+    "ResponseBody": "{\"article\": {\"slug\": \"searchable-article-skyrampkw1742121600\", \"title\": \"Searchable Article Skyrampkw1742121600\", \"description\": \"Testing keyword search functionality\", \"body\": \"This article body contains unique keyword skyrampkw1742121600 for search validation.\", \"tagList\": [], \"favorited\": false, \"favoritesCount\": 0, \"author\": {\"username\": \"searchtest_1742121600\", \"bio\": \"\", \"image\": null, \"following\": false}}}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/api/articles",
+    "QueryParams": {},
+    "StatusCode": 201,
+    "Port": 8000,
+    "Timestamp": "2026-03-16T21:40:42.832Z",
+    "Scheme": "http"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{\"articles\": [{\"slug\": \"searchable-article-skyrampkw1742121600\", \"title\": \"Searchable Article Skyrampkw1742121600\", \"description\": \"Testing keyword search functionality\", \"body\": \"This article body contains unique keyword skyrampkw1742121600 for search validation.\", \"tagList\": [], \"favorited\": false, \"favoritesCount\": 0, \"author\": {\"username\": \"searchtest_1742121600\", \"bio\": \"\", \"image\": null, \"following\": false}}], \"articlesCount\": 1}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "GET",
+    "Path": "/api/articles",
+    "QueryParams": {"search": ["skyrampkw1742121600"]},
+    "StatusCode": 200,
+    "Port": 8000,
+    "Timestamp": "2026-03-16T21:40:48.651Z",
+    "Scheme": "http"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{\"articles\": [], \"articlesCount\": 0}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "GET",
+    "Path": "/api/articles",
+    "QueryParams": {"search": ["xnonmatchingkeywordxyz1742121600"]},
+    "StatusCode": 200,
+    "Port": 8000,
+    "Timestamp": "2026-03-16T21:40:53.682Z",
+    "Scheme": "http"
+  }
+]
