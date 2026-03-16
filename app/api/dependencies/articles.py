@@ -22,6 +22,7 @@ def get_articles_filters(
     tag: Optional[str] = None,
     author: Optional[str] = None,
     favorited: Optional[str] = None,
+    search: Optional[str] = None,
     limit: int = Query(DEFAULT_ARTICLES_LIMIT, ge=1),
     offset: int = Query(DEFAULT_ARTICLES_OFFSET, ge=0),
 ) -> ArticlesFilters:
@@ -29,6 +30,7 @@ def get_articles_filters(
         tag=tag,
         author=author,
         favorited=favorited,
+        search=search,
         limit=limit,
         offset=offset,
     )
