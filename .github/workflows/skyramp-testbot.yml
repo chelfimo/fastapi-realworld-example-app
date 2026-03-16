@@ -41,7 +41,7 @@ jobs:
           target_ready_check_timeout: 60
 
           test_directory: "tests"
-          auto_commit: true
+          auto_commit: false
           post_pr_comment: true
           enable_debug: true
           commit_message: "TestBot: update tests for fastapi app"
