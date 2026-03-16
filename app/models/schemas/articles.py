@@ -39,5 +39,6 @@ class ArticlesFilters(BaseModel):
     tag: Optional[str] = None
     author: Optional[str] = None
     favorited: Optional[str] = None
+    search: Optional[str] = None
     limit: int = Field(DEFAULT_ARTICLES_LIMIT, ge=1)
     offset: int = Field(DEFAULT_ARTICLES_OFFSET, ge=0)
