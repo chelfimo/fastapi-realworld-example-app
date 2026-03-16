@@ -7,13 +7,14 @@ WORKDIR /app
 
 
 RUN apt-get update && \
-    apt-get install -y --no-install-recommends netcat && \
+    apt-get install -y --no-install-recommends netcat gcc python3-dev && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 COPY poetry.lock pyproject.toml ./
-RUN pip install poetry==1.1 && \
+RUN pip install poetry==1.8 && \
     poetry config virtualenvs.in-project true && \
-    poetry install --no-dev
+    poetry install --no-dev && \
+    .venv/bin/pip install "setuptools<75"
 
 COPY . ./
 
