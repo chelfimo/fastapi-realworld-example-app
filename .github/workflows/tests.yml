@@ -49,14 +49,14 @@ jobs:
         id: cache
         with:
           path: .venv
-          key: venv-${{ runner.os }}-py-${{ matrix.python-version }}-poetry-${{ hashFiles('poetry.lock') }}
+          key: venv-v2-${{ runner.os }}-py-${{ matrix.python-version }}-poetry-${{ hashFiles('poetry.lock') }}
 
       - name: Ensure cache is healthy
         if: steps.cache.outputs.cache-hit == 'true'
         run: poetry run pip --version >/dev/null 2>&1 || rm -rf .venv
 
       - name: Install dependencies
-        run: poetry install --no-interaction
+        run: poetry install --no-interaction && poetry run pip install "setuptools<75"
 
       - name: Run tests
         env:
