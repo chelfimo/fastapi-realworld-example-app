@@ -54,6 +54,12 @@ async def mark_article_as_favorite(
     user: User = Depends(get_current_user_authorizer()),
     articles_repo: ArticlesRepository = Depends(get_repository(ArticlesRepository)),
 ) -> ArticleInResponse:
+    if article.author.username == user.username:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail=strings.UNABLE_TO_FAVORITE_OWN_ARTICLE,
+        )
+
     if not article.favorited:
         await articles_repo.add_article_into_favorites(article=article, user=user)
 
