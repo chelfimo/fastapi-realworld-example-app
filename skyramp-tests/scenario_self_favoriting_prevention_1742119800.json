@@ -1,0 +1,80 @@
+[
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"user\": {\"email\": \"testbot@example.com\", \"password\": \"Testbot123!\"}}",
+    "ResponseBody": "{\"user\": {\"username\": \"testbot\", \"email\": \"testbot@example.com\", \"bio\": null, \"image\": null, \"token\": \"eyJhbGciOiJIUzI1NiJ9.test\"}}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/api/users/login",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 8000,
+    "Timestamp": "2026-03-16T19:21:18.834Z",
+    "Scheme": "http"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"article\": {\"title\": \"My Test Article 1742119800\", \"description\": \"A test article for self-favoriting scenario\", \"body\": \"This article is created to test that an author cannot favorite their own article.\", \"tagList\": []}}",
+    "ResponseBody": "{\"article\": {\"slug\": \"my-test-article-1742119800\", \"title\": \"My Test Article 1742119800\", \"description\": \"A test article for self-favoriting scenario\", \"body\": \"This article is created to test that an author cannot favorite their own article.\", \"tagList\": [], \"author\": {\"username\": \"testbot\", \"bio\": null, \"image\": null, \"following\": false}, \"favorited\": false, \"favoritesCount\": 0, \"createdAt\": \"2026-03-16T19:21:18.834Z\", \"updatedAt\": \"2026-03-16T19:21:18.834Z\"}}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/api/articles",
+    "QueryParams": {},
+    "StatusCode": 201,
+    "Port": 8000,
+    "Timestamp": "2026-03-16T19:21:24.648Z",
+    "Scheme": "http"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{}",
+    "ResponseBody": "{\"detail\": \"you can not favorite your own article\"}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/api/articles/my-test-article-1742119800/favorite",
+    "QueryParams": {},
+    "StatusCode": 400,
+    "Port": 8000,
+    "Timestamp": "2026-03-16T19:21:28.963Z",
+    "Scheme": "http"
+  }
+]
