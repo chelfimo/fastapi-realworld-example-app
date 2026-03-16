@@ -74,7 +74,7 @@ It is most likely caused by POSTGRES_HOST not pointing to its localhost.
 Run tests
 ---------
 
-Tests for this project are defined in the ``tests/`` folder.
+Tests for this, project are defined in the ``tests/`` folder.
 
 Set up environment variable ``DATABASE_URL`` or set up ``database_url`` in ``app/core/settings/test.py``
 
