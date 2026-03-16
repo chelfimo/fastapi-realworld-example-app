@@ -18,7 +18,7 @@ class ArticleInResponse(RWSchema):
 
 
 class ArticleInCreate(RWSchema):
-    title: str
+    title: str = Field(..., max_length=100)
     description: str
     body: str
     tags: List[str] = Field([], alias="tagList")
