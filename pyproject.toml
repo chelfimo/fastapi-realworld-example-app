@@ -15,7 +15,7 @@ pyjwt = "^2.4"
 databases = "^0.6.1"
 asyncpg = "^0.26.0"
 psycopg2-binary = "^2.9.3"
-aiosql = "^6.2"
+aiosql = "^13.3"
 pypika = "^0.48.9"
 alembic = "^1.8"
 python-slugify = "^6.1"
@@ -44,10 +44,7 @@ combine_as_imports = true
 
 [tool.pytest.ini_options]
 testpaths = "tests"
-filterwarnings = [
-  "error",
-  "ignore::DeprecationWarning:pkg_resources",
-]
+filterwarnings = "error"
 addopts = '''
   --strict-markers
   --tb=short
