@@ -41,6 +41,9 @@ class ProfilesQueriesMixin:
     async def is_user_following_for_another(
         self, conn: Connection, *, follower_username: str, following_username: str
     ) -> Record: ...
+    async def get_articles_count_for_user(
+        self, conn: Connection, *, username: str
+    ) -> Record: ...
     async def subscribe_user_to_another(
         self, conn: Connection, *, follower_username: str, following_username: str
     ) -> None: ...
