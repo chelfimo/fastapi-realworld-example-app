@@ -37,6 +37,7 @@ async def list_articles(
         tag=articles_filters.tag,
         author=articles_filters.author,
         favorited=articles_filters.favorited,
+        search=articles_filters.search,
         limit=articles_filters.limit,
         offset=articles_filters.offset,
         requested_user=user,

@@ -1,7 +1,7 @@
 from typing import List, Optional, Sequence, Union
 
 from asyncpg import Connection, Record
-from pypika import Query
+from pypika import Query, functions as fn
 
 from app.db.errors import EntityDoesNotExist
 from app.db.queries.queries import queries
@@ -104,6 +104,7 @@ class ArticlesRepository(BaseRepository):  # noqa: WPS214
         tag: Optional[str] = None,
         author: Optional[str] = None,
         favorited: Optional[str] = None,
+        search: Optional[str] = None,
         limit: int = 20,
         offset: int = 0,
         requested_user: Optional[User] = None,
@@ -193,6 +194,14 @@ class ArticlesRepository(BaseRepository):  # noqa: WPS214
                 ),
             )
             # fmt: on
+
+        if search:
+            query_params.append(f"%{search}%")
+            query_params_count += 1
+            query = query.where(
+                fn.Lower(articles.title).like(fn.Lower(Parameter(query_params_count)))
+                | fn.Lower(articles.body).like(fn.Lower(Parameter(query_params_count))),
+            )
 
         query = query.limit(Parameter(query_params_count + 1)).offset(
             Parameter(query_params_count + 2),
