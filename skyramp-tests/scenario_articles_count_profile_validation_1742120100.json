@@ -1,0 +1,106 @@
+[
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"user\": {\"username\": \"testbot_ac_1742120100\", \"email\": \"testbot_ac_1742120100@example.com\", \"password\": \"Password123!\"}}",
+    "ResponseBody": "{\"user\": {\"username\": \"testbot_ac_1742120100\", \"email\": \"testbot_ac_1742120100@example.com\", \"bio\": \"\", \"image\": null, \"token\": \"jwt.token.here\"}}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/api/users",
+    "QueryParams": {},
+    "StatusCode": 201,
+    "Port": 8000,
+    "Timestamp": "2026-03-16T21:08:25.144Z",
+    "Scheme": "http"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"user\": {\"email\": \"testbot_ac_1742120100@example.com\", \"password\": \"Password123!\"}}",
+    "ResponseBody": "{\"user\": {\"username\": \"testbot_ac_1742120100\", \"email\": \"testbot_ac_1742120100@example.com\", \"bio\": \"\", \"image\": null, \"token\": \"jwt.token.here\"}}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/api/users/login",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 8000,
+    "Timestamp": "2026-03-16T21:08:29.130Z",
+    "Scheme": "http"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"article\": {\"title\": \"Testbot Article 1742120100\", \"description\": \"Testing articles count in profile response\", \"body\": \"This article is created to validate the articles_count field returned in the profile response.\", \"tagList\": []}}",
+    "ResponseBody": "{\"article\": {\"slug\": \"testbot-article-1742120100\", \"title\": \"Testbot Article 1742120100\", \"description\": \"Testing articles count in profile response\", \"body\": \"This article is created to validate the articles_count field returned in the profile response.\", \"tagList\": [], \"favorited\": false, \"favoritesCount\": 0, \"author\": {\"username\": \"testbot_ac_1742120100\", \"bio\": \"\", \"image\": null, \"following\": false, \"articles_count\": 1}}}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/api/articles",
+    "QueryParams": {},
+    "StatusCode": 201,
+    "Port": 8000,
+    "Timestamp": "2026-03-16T21:08:35.256Z",
+    "Scheme": "http"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{\"profile\": {\"username\": \"testbot_ac_1742120100\", \"bio\": \"\", \"image\": null, \"following\": false, \"articles_count\": 1}}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "GET",
+    "Path": "/api/profiles/testbot_ac_1742120100",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 8000,
+    "Timestamp": "2026-03-16T21:08:41.132Z",
+    "Scheme": "http"
+  }
+]

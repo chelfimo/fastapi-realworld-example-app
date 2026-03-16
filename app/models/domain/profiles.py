@@ -8,3 +8,4 @@ class Profile(RWModel):
     bio: str = ""
     image: Optional[str] = None
     following: bool = False
+    articles_count: int = 0

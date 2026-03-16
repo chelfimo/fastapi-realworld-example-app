@@ -25,6 +25,11 @@ VALUES ((
             FROM users
             WHERE username = :following_username));
 
+-- name: get-articles-count-for-user^
+SELECT COUNT(*) AS articles_count
+FROM articles
+WHERE author_id = (SELECT id FROM users WHERE username = :username);
+
 -- name: unsubscribe-user-from-another!
 DELETE
 FROM followers_to_followings
