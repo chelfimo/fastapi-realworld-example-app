@@ -110,14 +110,3 @@ jobs:
           skyramp_license_file: ${{ secrets.SKYRAMP_LICENSE_FILE }}
           anthropic_api_key: ${{ secrets.SKYRAMP_TESTBOT_API_KEY }}
           github_token: ${{ steps.app-token.outputs.token }}
-
-          target_setup_command: "./deployment-testbot/setup.sh"
-          target_ready_check_command: "curl -f http://localhost:8000/api/tags"
-          target_ready_check_timeout: 60
-
-          test_directory: "tests"
-          auto_commit: true
-          post_pr_comment: true
-          enable_debug: true
-          commit_message: "TestBot: update tests for fastapi app"
-          skyramp_mcp_version: next
