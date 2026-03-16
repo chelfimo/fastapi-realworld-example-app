@@ -17,6 +17,7 @@ USER_IS_ALREADY_FOLLOWED = "you follow this user already"
 WRONG_TOKEN_PREFIX = "unsupported authorization type"  # noqa: S105
 MALFORMED_PAYLOAD = "could not validate credentials"
 
+UNABLE_TO_FAVORITE_OWN_ARTICLE = "you can not favorite your own article"
 ARTICLE_IS_ALREADY_FAVORITED = "you are already marked this articles as favorite"
 ARTICLE_IS_NOT_FAVORITED = "article is not favorited"
 
