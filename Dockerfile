@@ -13,8 +13,7 @@ RUN apt-get update && \
 COPY poetry.lock pyproject.toml ./
 RUN pip install poetry==1.8 && \
     poetry config virtualenvs.in-project true && \
-    poetry install --no-dev && \
-    .venv/bin/pip install "setuptools<75"
+    poetry install --no-dev
 
 COPY . ./
 

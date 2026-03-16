@@ -13,7 +13,7 @@ jobs:
   lint:
     name: Run tests
 
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
 
     strategy:
       matrix:
@@ -41,7 +41,7 @@ jobs:
       - name: Install Poetry
         uses: snok/install-poetry@v1
         with:
-          version: "1.1.12"
+          version: "1.8.0"
           virtualenvs-in-project: true
 
       - name: Set up cache
@@ -49,7 +49,7 @@ jobs:
         id: cache
         with:
           path: .venv
-          key: venv-${{ runner.os }}-py-${{ matrix.python-version }}-poetry-${{ hashFiles('poetry.lock') }}
+          key: venv-v2-${{ runner.os }}-py-${{ matrix.python-version }}-poetry-${{ hashFiles('poetry.lock') }}
 
       - name: Ensure cache is healthy
         if: steps.cache.outputs.cache-hit == 'true'
